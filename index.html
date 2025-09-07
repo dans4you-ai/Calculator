@@ -573,7 +573,8 @@
     <div class="stars" id="stars"></div>
     
     <button class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>Menu</button>
+        <i class="fas fa-bars"></i> Menu
+    </button>
     
     <div class="container">
         <!-- Sidebar Menu -->
@@ -1673,6 +1674,32 @@
                 });
             });
         }
+        
+        // Toggle Sidebar
+function initSidebarToggle() {
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    if (menuToggle && sidebar && closeSidebar) {
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.add('open');
+        });
+
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+
+        // Tutup sidebar kalau klik di luar area sidebar
+        document.addEventListener('click', (e) => {
+            if (sidebar.classList.contains('open') &&
+                !sidebar.contains(e.target) &&
+                e.target !== menuToggle) {
+                sidebar.classList.remove('open');
+            }
+        });
+    }
+}
         
         // Initialize when page loads
         window.addEventListener('DOMContentLoaded', () => {
