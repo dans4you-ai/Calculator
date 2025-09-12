@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SANZZ Store - Panel Pterodactyl</title>
+    <title>SANZZXASHAIMUP Store - Panel Pterodactyl</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #0a0e17;
@@ -12,6 +13,7 @@
             --text: #e0e0e0;
             --highlight: #8a2be2;
             --neon: #00ffff;
+            --neon-pink: #ff00ff;
         }
         
         * {
@@ -28,6 +30,7 @@
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(74, 27, 122, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.05) 0%, transparent 20%);
+            min-height: 100vh;
         }
         
         .container {
@@ -57,19 +60,31 @@
             z-index: -1;
         }
         
-        h1 {
-            font-size: 2.5rem;
+        .logo {
+            font-size: 2.8rem;
             margin-bottom: 10px;
             color: var(--neon);
             text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
             letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--neon-pink);
         }
         
         .subtitle {
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: var(--text);
             opacity: 0.8;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
         .tagline {
@@ -115,6 +130,9 @@
             font-size: 1.5rem;
             color: var(--neon);
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
         .product-price {
@@ -155,7 +173,7 @@
         }
         
         .promo-badge {
-            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon));
             color: black;
             padding: 3px 8px;
             border-radius: 4px;
@@ -171,6 +189,10 @@
             padding-bottom: 10px;
             border-bottom: 1px solid rgba(138, 43, 226, 0.3);
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
         .reseller-grid {
@@ -258,16 +280,43 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.3s;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
         }
         
         .contact-icon {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
             color: var(--highlight);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(138, 43, 226, 0.1);
+            transition: background 0.3s;
+        }
+        
+        .contact-method:hover .contact-icon {
+            background: rgba(138, 43, 226, 0.3);
         }
         
         .contact-info {
             font-weight: bold;
+        }
+        
+        .whatsapp {
+            color: #25D366;
+        }
+        
+        .telegram {
+            color: #0088cc;
         }
         
         footer {
@@ -281,6 +330,21 @@
         
         .pulse {
             animation: pulse 2s infinite;
+            color: var(--neon-pink);
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid red;
+            margin: 15px 0;
+        }
+        
+        .currency {
+            font-size: 0.9em;
+            vertical-align: super;
         }
         
         @keyframes pulse {
@@ -298,131 +362,148 @@
                 flex-direction: column;
                 gap: 20px;
             }
+            
+            .logo {
+                font-size: 2rem;
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>SANZZ STORE</h1>
-            <div class="subtitle">OPEN PANEL PTERODACTYL</div>
+            <h1 class="logo">
+                <i class="fas fa-store"></i>
+                SANZZ<span>XASHAIMUP</span>
+            </h1>
+            <div class="subtitle">
+                <i class="fas fa-server"></i>
+                OPEN PANEL PTERODACTYL
+            </div>
             <div class="tagline">by SANZZ</div>
         </header>
         
         <section class="products">
             <div class="product-card">
-                <h3 class="product-title">MURID BAND</h3>
-                <div class="product-price">Rp 20.000</div>
+                <h3 class="product-title"><i class="fas fa-crown"></i> MURID BAND</h3>
+                <div class="product-price">Rp20.000</div>
                 <div class="product-description">FREE NOKOS SUPPORT WA FC</div>
             </div>
             
             <div class="product-card">
-                <h3 class="product-title">MURID UNBAND</h3>
-                <div class="product-price">Rp 15.000</div>
+                <h3 class="product-title"><i class="fas fa-user-graduate"></i> MURID UNBAND</h3>
+                <div class="product-price">Rp15.000</div>
                 <div class="product-description">FREE MT HARAM</div>
             </div>
             
             <div class="product-card">
-                <h3 class="product-title">MURBUG</h3>
-                <div class="product-price">Rp 20.000</div>
+                <h3 class="product-title"><i class="fas fa-bug"></i> MURBUG</h3>
+                <div class="product-price">Rp20.000</div>
             </div>
             
             <div class="product-card">
-                <h3 class="product-title">JASA BUG</h3>
-                <div class="product-price">Rp 5.000</div>
+                <h3 class="product-title"><i class="fas fa-tools"></i> JASA BUG</h3>
+                <div class="product-price">Rp5.000</div>
             </div>
         </section>
         
-        <h2 class="section-title">LIST PANEL</h2>
+        <h2 class="section-title">
+            <i class="fas fa-list"></i>
+            LIST PANEL
+        </h2>
         
         <div class="panel-grid">
             <div class="panel-item">
                 <span class="panel-spec">1GB CPU 30%</span>
-                <span class="panel-price">1K</span>
+                <span class="panel-price">Rp1.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">2GB CPU 60%</span>
-                <span class="panel-price">2K</span>
+                <span class="panel-price">Rp2.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">3GB CPU 90%</span>
-                <span class="panel-price">3K</span>
+                <span class="panel-price">Rp3.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">4GB CPU 110%</span>
-                <span class="panel-price">4K</span>
+                <span class="panel-price">Rp4.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">5GB CPU 140%</span>
-                <span class="panel-price">5K</span>
+                <span class="panel-price">Rp5.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">6GB CPU 170%</span>
-                <span class="panel-price">6K</span>
+                <span class="panel-price">Rp6.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">7GB CPU 200%</span>
-                <span class="panel-price">7K</span>
+                <span class="panel-price">Rp7.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">8GB CPU 230%</span>
-                <span class="panel-price">8K</span>
+                <span class="panel-price">Rp8.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">9GB CPU 260%</span>
-                <span class="panel-price">9K</span>
+                <span class="panel-price">Rp9.000</span>
             </div>
             
             <div class="panel-item">
                 <span class="panel-spec">10GB CPU 290%</span>
-                <span class="panel-price">10K</span>
+                <span class="panel-price">Rp10.000</span>
             </div>
             
             <div class="panel-item">
-                <span class="panel-spec">Unli CPU 0%</span>
-                <span class="panel-price">5K <span class="promo-badge">PROMO</span></span>
+                <span class="panel-spec">Unli CPU Unli</span>
+                <span class="panel-price">Rp5.000 <span class="promo-badge">PROMO</span></span>
             </div>
         </div>
         
-        <div class="product-description" style="text-align: center; margin: 20px 0;">
-            <span class="pulse">GARANSI 15H 1X REPLACE KE DELL? CHAT ADMIN‼️</span><br>
+        <div class="warning">
+            <span class="pulse"><i class="fas fa-exclamation-circle"></i> GARANSI 15H 1X REPLACE KE DELL? CHAT ADMIN‼️</span><br>
             SPEK VPS R16C8 MASA AKTIF VPS 30H
         </div>
         
-        <h2 class="section-title">OPEN PANEL BY SANZZ</h2>
+        <h2 class="section-title">
+            <i class="fas fa-server"></i>
+            OPEN PANEL BY SANZZ
+        </h2>
         
         <div class="reseller-grid">
             <div class="reseller-item">
                 <div class="reseller-name">Reseller Panel</div>
-                <div class="reseller-price">2K</div>
+                <div class="reseller-price">Rp2.000</div>
             </div>
             
             <div class="reseller-item">
-                <div class="reseller-name">Adp</div>
-                <div class="reseller-price">5K</div>
+                <div class="reseller-name">Admin Panel</div>
+                <div class="reseller-price">Rp5.000</div>
             </div>
             
             <div class="reseller-item">
-                <div class="reseller-name">Pt</div>
-                <div class="reseller-price">8K</div>
+                <div class="reseller-name">Partner Panel</div>
+                <div class="reseller-price">Rp8.000</div>
             </div>
             
             <div class="reseller-item">
                 <div class="reseller-name">Own Panel</div>
-                <div class="reseller-price">10K</div>
+                <div class="reseller-price">Rp10.000</div>
             </div>
             
             <div class="reseller-item">
-                <div class="reseller-name">Tk</div>
-                <div class="reseller-price">13K</div>
+                <div class="reseller-name">Tangan Kanan Panel</div>
+                <div class="reseller-price">Rp13.000</div>
             </div>
         </div>
         
@@ -444,21 +525,51 @@
         <div class="contact">
             <h3 class="contact-title">Dapat dipesan langsung sesuai pesanan melalui:</h3>
             <div class="contact-methods">
-                <div class="contact-method">
-                    <div class="contact-icon">📱</div>
+                <a href="https://wa.me/6282286972989" class="contact-method" target="_blank">
+                    <div class="contact-icon whatsapp"></i>
+                    </div>
                     <div class="contact-info">WhatsApp: +62 822-8697-2989</div>
-                </div>
+                </a>
                 
-                <div class="contact-method">
-                    <div class="contact-icon">✉️</div>
+                <a href="https://t.me/SANZZXLONELY" class="contact-method" target="_blank">
+                    <div class="contact-icon telegram">
+                        <i class="fab fa-telegram"></i>
+                    </div>
                     <div class="contact-info">Telegram: t.me/SANZZXLONELY</div>
-                </div>
+                </a>
             </div>
         </div>
         
         <footer>
-            &copy; 2023 SANZZ Store - All Rights Reserved
+            &copy; 2023 SANZZXASHAIMUP Store - All Rights Reserved
         </footer>
     </div>
+
+    <script>
+        // Animasi untuk elemen dengan kelas pulse
+        document.addEventListener('DOMContentLoaded', function() {
+            const pulseElements = document.querySelectorAll('.pulse');
+            
+            pulseElements.forEach(element => {
+                element.style.animation = 'pulse 2s infinite';
+            });
+            
+            // Efek ketik untuk judul
+            const title = document.querySelector('.logo');
+            const originalText = title.innerHTML;
+            title.innerHTML = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    title.innerHTML += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            
+            typeWriter();
+        });
+    </script>
 </body>
 </html>
