@@ -271,51 +271,54 @@
         
         .contact-methods {
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
         }
         
         .contact-method {
             display: flex;
-            flex-direction: column;
             align-items: center;
             text-decoration: none;
             color: var(--text);
             transition: transform 0.3s;
+            background: rgba(138, 43, 226, 0.1);
+            border-radius: 8px;
+            padding: 15px 20px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
         }
         
         .contact-method:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+            background: rgba(138, 43, 226, 0.2);
         }
         
         .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: var(--highlight);
-            width: 70px;
-            height: 70px;
+            font-size: 2rem;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(138, 43, 226, 0.1);
-            transition: background 0.3s;
-        }
-        
-        .contact-method:hover .contact-icon {
-            background: rgba(138, 43, 226, 0.3);
+            flex-shrink: 0;
         }
         
         .contact-info {
             font-weight: bold;
+            text-align: left;
+            flex-grow: 1;
         }
         
-        .whatsapp {
+        .whatsapp .contact-icon {
+            background: rgba(37, 211, 102, 0.2);
             color: #25D366;
         }
         
-        .telegram {
+        .telegram .contact-icon {
+            background: rgba(0, 136, 204, 0.2);
             color: #0088cc;
         }
         
@@ -360,12 +363,16 @@
             
             .contact-methods {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
             }
             
             .logo {
                 font-size: 2rem;
                 flex-direction: column;
+            }
+            
+            .contact-method {
+                flex-direction: row;
             }
         }
     </style>
@@ -523,25 +530,26 @@
         </div>
         
         <div class="contact">
-            <h3 class="contact-title">Dapat dipesan langsung sesuai pesanan melalui:</h3>
+            <h3 class="contact-title">Contact Admin:</h3>
             <div class="contact-methods">
-                <a href="https://wa.me/6282286972989" class="contact-method" target="_blank">
-                    <div class="contact-icon whatsapp"></i>
+                <a href="https://wa.me/6282286972989" class="contact-method whatsapp" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
                     </div>
-                    <div class="contact-info">WhatsApp: +62 822-8697-2989</div>
+                    <div class="contact-info">Fast Respons</div>
                 </a>
                 
-                <a href="https://t.me/SANZZXLONELY" class="contact-method" target="_blank">
-                    <div class="contact-icon telegram">
+                <a href="https://t.me/SANZZXLONELY" class="contact-method telegram" target="_blank">
+                    <div class="contact-icon">
                         <i class="fab fa-telegram"></i>
                     </div>
-                    <div class="contact-info">Telegram: t.me/SANZZXLONELY</div>
+                    <div class="contact-info">Fast Respons</div>
                 </a>
             </div>
         </div>
         
         <footer>
-            &copy; 2023 SANZZXASHAIMUP Store - All Rights Reserved
+            &copy; 2025 SANZZXASHAIMUP Store - All Rights Reserved
         </footer>
     </div>
 
